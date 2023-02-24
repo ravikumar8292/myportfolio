@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-y: scroll;
+            overflow-x: hidden;
+
+        }
+
+        nav {
+            display: flex;
+            /*align-items: center;*/
+            justify-content: space-between;
+            background-color: black;
+            opacity: 0.8;
+            margin-top: 23px;
+            font-size: 18px;
+            border-radius: 23px;
+
+        }
+
+        .right {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+        }
+
+        #active {
+            /* background-color: #f2f2f2; */
+            color: yellowgreen;
+        }
+
+        .left>li {
+            margin-right: 43px;
+        }
+
+        li {
+            list-style: none;
+
+
+        }
+
+        a {
+            text-decoration: none;
+            margin-left: 70px;
+            color: white;
+
+        }
+
+        a:hover {
+            color: greenyellow;
+        }
+
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        img {
+            margin-top: 20px;
+            border-radius: 50%;
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+            margin-top: 20px;
+        }
+
+        .about {
+
+            background-color: #dedcdc;
+            padding: 20px;
+
+        }
+
+
+        .skills {
+            background-color: #f2f2f2;
+            padding: 20px;
+
+
+        }
+
+        .margin>li {
+            margin-left: 50px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 10px 10px;
+            display: inline-block;
+            margin: 10px 0;
+        }
+
+        .contact {
+            padding-left: 10px;
+
+        }
+
+        .anchour>li>a {
+            text-decoration: none;
+            color: rgb(86, 81, 108);
+            /* color: #333; */
+            font-weight: bold;
+        }
+
+        .anchour>li>a:hover {
+            /* background-color: aqua; */
+            color: #333;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="right">
+                <li> <a href="#profile" id="active">Profile</a></li>
+                <li> <a href="#ski">Skills</a></li>
+                <li> <a href="#contac">Contact</a></li>
+                <!-- <li> <a href="#">Contact Us</a></li> -->
+                <li> <a href="#abou">About</a></li>
+            </ul>
+            <ul class="left">
+                <li> <a href="#">Blogs</a></li>
+
+            </ul>
+
+        </nav>
+    </header>
+    <header id="profile">
+        <img src="ravi.JPG" alt="Profile Picture">
+        
+        <div onmouseover="Over(this)" onmouseout="Out(this)">
+        
+        <center>
+            <h1>Ravi Kumar </h1>
+        </center>
+        </div>
+
+        <!-- <h2>Full Stack Developer</h2> -->
+        <p>MCA student</p>
+        <p>Chandigarh University</p>
+    </header>
+    <section class="about" id="abou">
+        <h2>About Me</h2>
+        <p>Some text about me , I am Ravi kumar from Gaya (Bihar) and I have passed BSC.IT from Gaya College Gaya
+            Bihar.
+            and Now I am in MCA Chandigarh University and after Mca I wants to become a full stack web developer . Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Laboriosam atque et nam, dolores hic deserunt quidem
+            corporis rem dolorem, in ex velit eligendi officia sed, mollitia ea optio enim accusantium blanditiis. Magni
+            quos natus possimus omnis blanditiis culpa sed, cum pariatur dolores itaque deleniti corrupti quis error qui
+            recusandae officiis porro eveniet facere amet ex dolorum labore ipsa obcaecati. Minima consequuntur
+            laboriosam aspernatur dicta, porro sequi explicabo? </p>
+    </section>
+    <section class="skills" id="ski">
+        <h2>Skills</h2>
+        <ul class="margin">
+            <li>C++</li>
+            <li>Python</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+    </section>
+    <footer class="contact" id="contac">
+        <h2>Contact us</h2>
+        <ul class="anchour">
+            <li><a href="tel:+8292598748">Contact</a></li>
+            <li><a href="mailto:ravi.kumarrfj@gmail.com">Email</a></li>
+            <li><a href="https://www.linkedin.com/in/ravi-kumar-020028143">LinkedIn</a></li>
+            <li><a href="https://github.com/ravikumar8292">GitHub</a></li>
+        </ul>
+    </footer>
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)"
+        style="background-color: #333;color: #fff;width:100%;height:20px;padding:40px;">
+        <center>
+            <h1>Mouse Over This</h1>
+        </center>
+    </div>
+
+    <script>
+        
+        function Over(profile){
+            profile.innerHTML ="<h1>Full Stack Developer<br><h2>Ravi Kumar</h2></h1>"
+            // profile.innerHTML = "<h3>Ravi Kumar</h3>"
+        }
+        function Out(profile){
+            profile.innerHTML = "<h1>Ravi Kumar</h1>"
+        }
+
+        function mOver(obj) {
+            obj.innerHTML = "<center><h1>Thank You For Access My Profile</h1></center>"
+        }
+
+        function mOut(obj) {
+            obj.innerHTML = "<center><h1>Mouse Over Me</h1></center>"
+        }
+    </script>
+</body>
+
+</html>
